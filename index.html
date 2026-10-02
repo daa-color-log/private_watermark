@@ -379,7 +379,7 @@
       opacity: 1;
     }
 
-    /* 썸네일 개별 삭제 버튼 */
+    /* thumbnail remove button */
     .thumb-remove-btn {
       position: absolute;
       top: 6px;
@@ -1161,7 +1161,6 @@
     }
   }
 
-  // 지정한 인덱스의 이미지 삭제 함수 (모달 갱신 로직 수정)
   function deleteItemByIndex(index) {
     if (index < 0 || index >= loadedFilesData.length) return;
 
@@ -1531,8 +1530,8 @@
       }
     }
 
-    updateDownloadBtnText();
-    downloadBtn.disabled = false;
+    // reset
+    resetAllItems();
   });
 
   applyLanguage(currentLang);
